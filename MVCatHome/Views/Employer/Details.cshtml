@@ -1,0 +1,41 @@
+﻿@model MVCatHome.Models.Employer
+
+@{
+    ViewBag.Title = "Details";
+}
+<div style="font-family : Arial">
+<h2>Employee Details</h2>
+<table >
+    <tr>
+        <td>
+            ID :
+        </td>
+        <td>
+            @Model.ID
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Name :
+        </td>
+        <td>
+            @Model.Name
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Age :
+        </td>
+        <td>
+            @Model.Age
+        </td>
+    </tr>
+</table>
+
+<br />
+
+@Html.ActionLink("Return to Employees Page", "Index",new { dptid = @Model.DepartmantID })
+
+</div>

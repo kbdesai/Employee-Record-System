@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MVCatHome.Models.Department>
+
+@using MVCatHome.Models;
+
+
+@{
+    ViewBag.Title = "Department List";
+}
+
+<div style="font-family:Arial">
+  
+    <h2>Department List</h2>
+    <ul>
+        @foreach (Department deptss in @Model)
+        {
+            <li>
+                @Html.ActionLink(deptss.DepartmentName, "Index","Employer", new { dptid = deptss.DepartmantID },null)
+            </li>
+        }
+    </ul>
+
+</div>

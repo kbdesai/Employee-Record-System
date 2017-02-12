@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MVCatHome.Models.Employer>
+
+@using MVCatHome.Models;
+
+@{
+    ViewBag.Title = "Employee List";
+}
+
+<div style="font-family : Arial">
+    <h2>Employee List</h2>
+    <ul>
+        @foreach(Employer empind in @Model)
+        {
+            <li>
+                @Html.ActionLink(empind.Name,"Details",new { id = empind.ID})
+            </li>
+        }
+    </ul>
+    <br />
+
+    @Html.ActionLink("Return to Department Page", "Department")
+
+</div>
+
